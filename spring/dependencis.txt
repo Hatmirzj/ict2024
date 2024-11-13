@@ -9,3 +9,74 @@
 			<artifactId>spring-context</artifactId>
 			<version>5.2.0.RELEASE</version>
 		</dependency>
+
+================SpringConfig.class
+package com.ict;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+//beans.xml
+
+@Configuration
+public class SpringConfig {
+	
+	@Bean
+	public Engine engine() {
+		return new Engine();
+	}
+	
+	@Bean
+	public Parking parking() {
+		return new Parking();
+	}
+
+}
+
+==================
+package com.ict;
+
+public class Parking {
+	
+	double amount;
+	
+	Parking(){
+		amount=999.99;
+	}
+	public double getAmount() {
+		return amount;
+	}
+
+}
+==================
+package com.ict;
+
+public class Engine {
+
+	  void milage() {
+		  System.out.println("Milage is 80KMPH");
+	  }
+	
+	
+}
+=====================
+package com.ict;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+public class CarApp 
+{  // static Engine engine;
+    public static void main( String[] args )
+    {   /*
+    	engine=new Engine();
+        engine.milage();
+        
+        Engine e1=new Engine();
+        e1.milage();
+        */
+    	AnnotationConfigApplicationContext context = 
+    			new AnnotationConfigApplicationContext(SpringConfig.class);
+    	Engine e=(Engine)context.getBean(Engine.class);	
+    	e.milage();
+   	Parking  p=(Parking)context.getBean(Parking.class);	
+    	System.out.println(p.amount);
+    	System.out.println(p.getAmount());
+   }
+}
