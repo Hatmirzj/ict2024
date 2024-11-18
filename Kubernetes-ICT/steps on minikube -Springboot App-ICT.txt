@@ -1,0 +1,21 @@
+kubectl version --client
+
+minikube start
+minikube dashboard
+
+
+kubectl create deployment sb-ict-app --image=arunajava567/sb-ict-app2024
+
+kubectl get deployments
+
+kubectl expose deployment sb-ict-app --type=NodePort --port=8087
+
+kubectl get pods
+
+kubectl get node
+
+kubectl get service
+
+kubectl describe services/sb-ict-app
+
+minikube  service sb-ict-app --url
