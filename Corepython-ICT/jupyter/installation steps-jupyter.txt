@@ -1,0 +1,26 @@
+
+
+pip:
+
+d:\>python --version
+d:\>pip --version
+
+d:\>pip install jupyter
+....
+d:\>jupyter --version
+
+d:\> goto folder in workspace -cmd
+
+d:\python\apps\>jupyter notebook
+
+new notebook need to be created..
+
+jupyter notebook can be converted into python file
+
+>jupyter nbconvert app1.ipynb --to python
+
+
+
+
+
+
