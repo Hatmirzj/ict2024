@@ -1,0 +1,6 @@
+name=input("enter your name")
+print(name)
+print(id(name))
+print(name.capitalize())
+print(name.endswith("r"))
+print(name.endswith('t'))
