@@ -4,12 +4,12 @@ mydb = mysql.connector.connect(
  host="localhost",
   user="root",
   password="root",
-  port='3307',
-  database='pythontraining1'
+  port='3306',
+  database='training'
 )
 
 mycursor = mydb.cursor()
-sql = "INSERT INTO customers (name, address) VALUES (%s, %s)"
+sql = "INSERT INTO customers1 (name, address) VALUES (%s, %s)"
 val = ("Sadwik", "Hyderabad")
 mycursor.execute(sql, val)
 val1 =("pythondev","hyderabad")
@@ -19,7 +19,7 @@ mydb.commit()
 print(mycursor.rowcount, "record inserted.")
 
 
-sql = "INSERT INTO customers (name, address) VALUES (%s, %s)"
+sql = "INSERT INTO customers1 (name, address) VALUES (%s, %s)"
 val = [
   ('Peter', 'Lowstreet 4'),
   ('Amy', 'Apple st 652'),

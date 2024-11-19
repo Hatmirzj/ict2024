@@ -1,14 +1,15 @@
-import mysql.connector
+import mysql.connector # type: ignore
+#pip install mysql-connector-python
 
 mydb = mysql.connector.connect(
  host="localhost",
   user="root",
   password="root",
-  port='3307',
-  database='pythontraining1'
+  port='3306',
+  database='training'
 )
 
 mycursor = mydb.cursor()
 
 
-mycursor.execute("CREATE TABLE customers (name VARCHAR(10), address VARCHAR(20))")
+mycursor.execute("CREATE TABLE customers1 (name VARCHAR(10), address VARCHAR(20))")
