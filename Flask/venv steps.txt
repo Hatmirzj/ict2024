@@ -1,0 +1,23 @@
+from flask import Flask                  #pip install flask
+app = Flask(__name__)  
+
+@app.route('/')    
+def hello():   
+    return '<h1>Welcome to Flask demo:ICTTraining</h1>'
+
+if __name__ == '__main__':
+    app.run(debug=True)
+=================
+project>python -m venv myenv
+project>cd myenv
+project\myenv>cd Scripts
+project\myenv\Scripts>activate.bat
+
+(myenv) C:\project\myenv\Scripts>cd..
+
+(myenv) C:\pythontraining\python\Corepython-ICT\Flask-ICT\App2\myenv>cd..
+
+(myenv) C:\project>deactivate
+c:\>
+
+c:\>pip freeze --to display available installed libraries with version
