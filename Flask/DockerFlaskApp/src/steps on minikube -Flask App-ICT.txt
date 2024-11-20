@@ -1,0 +1,11 @@
+kubectl version --client
+minikube start
+minikube dashboard
+kubectl create deployment flask-ict-app2 --image=arunajava567/flask-app
+kubectl get deployments
+kubectl expose deployment flask-ict-app2 --type=NodePort --port=8081
+kubectl get pods
+kubectl get node
+kubectl get service
+kubectl describe services/flask-ict-app2
+minikube  service flask-ict-app2 --url
